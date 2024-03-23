@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Team Page</title>
+    <script src="js/data.js"></script>
+    <link rel="stylesheet" href="css/teamStyles.css">
+</head>
+<body>
+
+<nav class="navbar">
+        <a href="home.html" class="logo"> <!-- Link to your home page -->
+            <img src="images/Vast-Stats-logo.png" alt="Logo">
+        </a>
+    <div class="navbar-links">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </div>
+</nav>
+<h1>Teams</h1>
+<div class="grid-container">
+
+    <table id="teamTable">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Season</th>
+            <th>Team Name</th>
+            <th>Team ABV</th>
+            <th>Wins</th>
+            <th>Losses</th>
+            <th>AVG Age</th>
+            <th>Arena</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody id="teamBody">
+
+        </tbody>
+    </table>
+
+    <form class="form-card">
+        <h2>Add New Team:</h2>
+        <section class="form-group">
+            <label for="teamName">Team Name:</label>
+            <input type="text" id="teamName">
+        </section>
+
+        <section class="form-group">
+            <label for="teamABV">Team ABV:</label>
+            <input type="text" id="teamABV">
+        </section>
+
+        <section class="form-group">
+            <label for="season">Season:</label>
+            <input type="text" id="season">
+        </section>
+
+        <section class="form-group">
+            <label for="wins">Wins:</label>
+            <input type="text" id="wins">
+        </section>
+
+        <section class="form-group">
+            <label for="losses">Losses:</label>
+            <input type="text" id="losses">
+        </section>
+
+        <section class="form-group">
+            <label for="age">AVG Age:</label>
+            <input type="text" id="age">
+        </section>
+
+        <section class="form-group">
+            <label for="arena">Arena:</label>
+            <input type="text" id="arena">
+        </section>
+        <button id="submit" type="submit">Add Team</button>
+    </form>
+</div>
+
+<footer>
+    <hr>
+    author: Mark Tsvyan<br>
+    &copy; copyright reserved<br><br>
+</footer>
+
+</body>
+</html>
+

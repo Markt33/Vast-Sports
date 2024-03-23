@@ -1,9 +1,9 @@
 package com.vast.vastsports;
 
 import com.vast.vastsports.db.PlayerRepository;
-//import com.vast.vastsports.db.TeamRepository;
+import com.vast.vastsports.db.TeamRepository;
 import com.vast.vastsports.models.Player;
-//import edu.greenriver.sdev.sdev372individual.models.Team;
+import com.vast.vastsports.models.Team;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -17,7 +17,7 @@ public class VastSportsApplication {
     public static void main(String[] args) {
         ApplicationContext context = SpringApplication.run(VastSportsApplication.class, args);
         PlayerRepository dbRepo = context.getBean(PlayerRepository.class);
-        //TeamRepository db2Repo = context.getBean(TeamRepository.class);
+        TeamRepository db2Repo = context.getBean(TeamRepository.class);
 
         List<Player> players = new ArrayList<>(List.of(
                 new Player(1, "Kobe Bryant", 41, "SF", 20),
@@ -35,7 +35,7 @@ public class VastSportsApplication {
 
         dbRepo.saveAll(players);
 
-        /*
+
         List<Team> teams = new ArrayList<>(List.of(
                 new Team(1, 2024, "Atlanta Hawks", "ATL", false, 26.1, 26, 33, "State Farm Arena"),
                 new Team(2, 2024, "Boston Celtics", "BOS", false, 28.4, 46, 12, "TD Garden"),
@@ -72,7 +72,7 @@ public class VastSportsApplication {
 
         db2Repo.saveAll(teams);
 
-         */
     }
+
 
 }
