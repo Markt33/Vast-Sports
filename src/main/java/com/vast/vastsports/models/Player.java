@@ -23,10 +23,19 @@ public class Player {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    private int season;
     private String name;
-    private int age;
     private String position;
+    private int age;
     private int experience;
+    private String league;
+    private String team;
+    private int assist;
+    private int steals;
+    private int blocks;
+    private int tov;
+    private int points;
+
 
 
 }

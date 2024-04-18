@@ -14,6 +14,8 @@ import java.util.List;
  * @version 1.0
  */
 @RestController
+@RequestMapping("api/v1/players")
+@CrossOrigin(origins = "*")
 public class PlayerController {
 
     private PlayerService service;
@@ -29,7 +31,7 @@ public class PlayerController {
      * Gets all the players.
      * @return this returns all the players.
      */
-    @GetMapping("players")
+    @GetMapping("all")
     public ResponseEntity<List<Player>> all(){
         return new ResponseEntity<>(service.all(), HttpStatus.OK);
     }
@@ -38,7 +40,7 @@ public class PlayerController {
      * @param id is the players given id.
      * @return returns the player with the given id.
      */
-    @GetMapping("players/{id}")
+    @GetMapping("{id}")
     public ResponseEntity<Player> byId(@PathVariable int id){
         if (!service.playerExistsByID(id)){
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
@@ -51,7 +53,7 @@ public class PlayerController {
      * @param newPlayer the new player variable.
      * @return this returns the new player and HttpStatus
      */
-    @PostMapping("players")
+    @PostMapping("")
     public ResponseEntity<Player> addPlayer(@RequestBody Player newPlayer){
         return new ResponseEntity<>(service.addPlayer(newPlayer), HttpStatus.CREATED);
     }
@@ -61,7 +63,7 @@ public class PlayerController {
      * @param updatePlayer the update player variable
      * @return returns the updated player info.
      */
-    @PutMapping("players/{id}")
+    @PutMapping("{id}")
     public ResponseEntity<Player> updatePlayer(@PathVariable int id,
                                                @RequestBody Player updatePlayer){
         Player player = service.byId(id);
@@ -79,7 +81,7 @@ public class PlayerController {
      * @param id is the players given id.
      * @return this returns the HttpsStatus error
      */
-    @DeleteMapping("players/{id}")
+    @DeleteMapping("{id}")
     public ResponseEntity<Player> deletePlayer(@PathVariable int id) {
         Player player = service.byId(id);
         if (player == null) {

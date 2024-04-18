@@ -1,0 +1,227 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #000;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px; /* Add padding for better touch target */
+    transition: background-color 0.3s; /* Smooth transition on hover */
+    font-size: 2em;
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white on hover */
+    border-radius: 5px; /* Rounded corners on hover */
+}
+
+.logo img {
+    width: 200px;
+    height: auto;
+}
+
+.navbar-links {
+    display: flex;
+}
+
+.navbar-links a {
+    margin-left: 20px; /* Add space between links */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    .navbar-links {
+        margin-top: 10px; /* Add space between logo and links */
+    }
+
+    .navbar a {
+        display: block; /* Convert links to block elements */
+        margin-bottom: 10px; /* Add space between links */
+    }
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* Header styles */
+h1 {
+    padding-top: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 3em;
+}
+
+/* Grid container */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Table styles */
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 12px; /* Increased padding for larger cells */
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Form card styles */
+.form-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 900px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+hr {
+    margin-bottom: 10px;
+}
+
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+
+/* Header styles */
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 36px;
+    color: #333; /* Dark color for better readability */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow for a subtle effect */
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Form styles */
+.form-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+}
+
+.form-group input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-group button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-group button:hover {
+    background-color: #0056b3;
+}
+
