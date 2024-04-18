@@ -4,8 +4,6 @@
 
 **Project Properties:** 
 * Author: Mark Tsvyan
-* Class: SDEV 372
-* Winter 2024 Quarter
 
 **Milestones:**
 * Project Creation 
