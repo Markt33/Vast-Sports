@@ -52,6 +52,10 @@ window.onload = async function () {
         addPlayerRow(tbody, player);
     }
 
+    // Select the search button and handle search
+    const searchButton = document.querySelector("#search-button");
+    searchButton.onclick = searchPlayer;
+
     //select all edit links
     const editLinks = document.querySelectorAll('.edit');
     for (const link of editLinks){
@@ -253,5 +257,18 @@ async function saveRecord(evt) {
 
     const response = await fetch(uri, config);
     const player = await response.json();
+}
+
+// Search function
+async function searchPlayer() {
+    const searchInput = document.querySelector("#search-input").value;
+    const uri = `${window.location.origin}/api/v1/players/search/${searchInput}`;
+    const config = {
+        method: "get"
+    };
+
+    const response = await fetch(uri, config);
+    const data = await response.json();
+    showPlayers(data);
 }
 

@@ -8,18 +8,23 @@
 </head>
 <body>
 
-<nav class="navbar">
-    <a href="home.html" class="logo"> <!-- Link to your home page -->
-        <img src="images/Vast-Stats-logo.png" alt="Logo">
-    </a>
-    <div class="navbar-links">
-        <a href="#">Home</a>
+<header>
+    <img class="logo" src="images/logo.png"/>
+    <nav class="navigation">
+        <a href="home.html">Home</a>
         <a href="#">About</a>
-        <a href="#">Contact</a>
-    </div>
-</nav>
+        <a href="player.html">Services</a>
+        <a href="##">Contact</a>
+        <button class="btnLogin-popup">Login</button>
+    </nav>
+</header>
+
 <h1>Players</h1>
+
 <div class="grid-container">
+
+    <input type="search" id="search-input" placeholder="Search by name">
+    <button id="search-button">Search</button>
 
     <table id="playerTable">
         <thead>
